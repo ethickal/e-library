@@ -17,7 +17,8 @@ export const Authentication = () => {
   }, [currentIndex])
 
   return (
-    <div className="auth-body">
+    <div className="auth-body"> 
+    { /* added a comment*/}
       <div className="auth-container">
         <div className="right-side">
           <h2>PanpacificU E-Library</h2>
