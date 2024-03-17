@@ -36,6 +36,7 @@ export const LearningMaterials = () => {
             <p>{material.title}</p>
             <button onClick={() => handlePdfClick(material._id)}>View PDF</button>
           </div>
+          
         ))
       ) : (
         <p>No learning materials found</p>
