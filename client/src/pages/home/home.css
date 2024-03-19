@@ -261,7 +261,8 @@
 
 .other-programs {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
