@@ -7,12 +7,12 @@
 
 .introduction-section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   color: white;
   background-color: #4E7133;
-  height: 230px;
+  height: 280px;
   margin: 0;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
   transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -25,19 +25,21 @@
 .welcome-greetings {
   display: flex;
   flex-direction: column;
-  margin-left: 80px;
+  margin: 30px 20px 20px;
 }
 
 .introduction-section h1 {
-  font-weight: 900;
-  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 50px 0px 20px;
+  margin: 1px 4px 0px; 
 }
 
 .main-section {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  height: 100%;
+  justify-content: center;
+  height: 20%;
   width: 100%;
   position: relative;
 }
@@ -58,6 +60,7 @@
   bottom: 0;
   z-index: 10;
 }
+
 
 .user-details {
   display: flex;
@@ -234,7 +237,7 @@
 /* Library Section CSS */
 
 .library-section {
-  max-height: 750px;
+  max-height: 670px;
   position: relative; 
   overflow-y: auto;
   z-index: 0; 
@@ -257,9 +260,8 @@
 }
 
 .other-programs {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
   justify-content: space-around;
 }
 
@@ -267,9 +269,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  height: 165px;
-  width: 400px;
+  justify-content: auto;
+  height: 120px;
+  width: 300px;
   border: none;
   box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.2), 2px 6px 6px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -288,14 +290,13 @@
 .program-details {
   display: flex;
   flex-direction: column;
-  flex-grow: 2;
-  padding: 10px;
-  margin-left: 2px;
+  flex-grow: 1;
+  padding: 9px 3px 4px;
 }
 
 .program-title {
-  font-size: 1.2rem;
-  font-weight: 900;
+  font-size: 1rem;
+  font-weight: 750;
   margin-bottom: 0;
 }
 
@@ -342,4 +343,708 @@
   padding: 5px;
   margin-top: 0;
   cursor: pointer;
+}
+
+
+/*for Ipad or tablet viewing*/
+
+@media only screen and (min-width: 678px) {
+  .home-container {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Lexend", sans-serif;
+  }
+  
+  .introduction-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color: #4E7133;
+    height: 330px;
+    margin: 0;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .introduction-section:hover {
+    background-color: #0C359E;
+  }
+  
+  .welcome-greetings {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 20px 20px;
+  }
+  
+  .introduction-section h1 {
+    font-weight: 700;
+    padding: 50px 0px 20px;
+    margin: 1px 4px 0px; 
+  }
+  
+  .main-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 20%;
+    width: 100%;
+    position: relative;
+  }
+  
+  /* Profile Section CSS */
+  
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 100vh;
+    background-color: #ffff;
+    color: #3c5c24;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+  
+  
+  .user-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  
+  .user-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2px;
+  }
+  
+  .user-greeting {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  
+  .user-email {
+    font-size: 1.1rem;
+    padding: 5px;
+    margin: 3px;
+    font-weight: 700;
+  }
+  
+  .user-role {
+    font-size: 1.3rem;
+    margin: 4px;
+  }
+  
+  .user-department {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .user-department p {
+    color: #4e7133ad;
+    margin: 5px;
+  }
+  
+  .separator-underline {
+    border-top: 4px solid #17171754; 
+    margin-bottom: 15px; 
+    width: 95%;
+    margin-top: 20px;
+  }
+  
+  .hide-profile-section {
+    position: absolute;
+    top: 1%;
+    left: 92%;
+    z-index: 0;
+    background-color: #4E7133;
+    padding: 8px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .upload-pic-form button,
+  .change-pic-btn {
+    padding: 10px;
+    background-color: #4E7133;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+  
+  .user-content-section {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-self: flex-start;
+  }
+  
+  .user-content-section h2 {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    font-weight: 800;
+  }
+  
+  .user-content-section h2:hover {
+    background-color: rgb(183, 162, 162);
+  }
+  
+  .log-out-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  
+  .log-out-section a {
+    margin-bottom: 16px;
+    cursor: pointer;
+  }
+  
+  .log-out-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .upload-pic-form button,
+  .change-pic-btn,
+  .log-out-section button,
+  .hide-profile-section {
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .upload-pic-form button:hover,
+  .change-pic-btn:hover,
+  .log-out-section button:hover,
+  .hide-profile-section:hover {
+    background-color: #0C359E;
+  }
+  
+  .upload-pic-form button:focus,
+  .change-pic-btn:focus,
+  .log-out-section button:focus,
+  .hide-profile-section:focus {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  }
+  
+  .upload-btn-choices {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+  }
+  
+  .log-out-section button {
+    padding: 10px;
+    background-color: #4E7133;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .show-profile-section {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    padding: 8px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .user-icon {
+    position: absolute;
+    top: 1%;
+    left: 0.5%;
+    z-index: 10;
+    cursor: pointer;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2px;
+  }
+  
+  /* Library Section CSS */
+  
+  .library-section {
+    max-height: 670px;
+    position: relative; 
+    overflow-y: auto;
+    z-index: 0; 
+    padding-bottom: 30px;
+  }
+  
+  .recommended-programs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 25px;
+  }
+  
+  .programs {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 2vh;
+  }
+  
+  .other-programs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .program-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: auto;
+    height: 113px;
+    width: 300px;
+    border: none;
+    box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.2), 2px 6px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #fff;
+    color: #000;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .program-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2), 0px 10px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .program-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 9px 3px 4px;
+  }
+  
+  .program-title {
+    font-size: 1rem;
+    font-weight: 750;
+    margin-bottom: 0;
+  }
+  
+  .program-description {
+    font-size: 0.9rem;
+  }
+  
+  .book-img {
+    align-self: center;
+    height: 80px;
+    width: 80px;
+    object-fit: cover; 
+    overflow: hidden;
+    padding: 0;
+  }
+  
+  
+  /* Search Input CSS */ 
+  
+  .search-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10;
+    height: 50px;
+  }
+  
+  .search-input {
+    width: 180px;
+    margin-top: 10px;
+  }
+  
+  .search-icon {
+    height: 20px;
+    width: 50px;
+    font-size: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192,192,192);
+    border-radius: 2px;
+    margin-left: -1px;
+    margin-right: 10px;
+    padding: 5px;
+    margin-top: 0;
+    cursor: pointer;
+  }
+}
+
+
+/*for desktop viewing*/
+
+@media only screen and (min-width: 1000px) {
+  .home-container {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Lexend", sans-serif;
+  }
+  
+  .introduction-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color: #4E7133;
+    height: 200px;
+    margin: 0px 0px 0px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .introduction-section:hover {
+    background-color: #0C359E;
+  }
+  
+  .welcome-greetings {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+  }
+  
+  .introduction-section h1 {
+    font-weight: 900;
+    margin: 0;
+  }
+
+  .main-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 20%;
+    width: 100%;
+    position: relative;
+  }
+  
+  /* Profile Section CSS */
+  
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 100vh;
+    background-color: #ffff;
+    color: #3c5c24;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+  
+  
+  .user-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  
+  .user-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2px;
+  }
+  
+  .user-greeting {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  
+  .user-email {
+    font-size: 1.1rem;
+    padding: 5px;
+    margin: 3px;
+    font-weight: 700;
+  }
+  
+  .user-role {
+    font-size: 1.3rem;
+    margin: 4px;
+  }
+  
+  .user-department {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .user-department p {
+    color: #4e7133ad;
+    margin: 5px;
+  }
+  
+  .separator-underline {
+    border-top: 4px solid #17171754; 
+    margin-bottom: 15px; 
+    width: 95%;
+    margin-top: 20px;
+  }
+  
+  .hide-profile-section {
+    position: absolute;
+    top: 1%;
+    left: 92%;
+    z-index: 0;
+    background-color: #4E7133;
+    padding: 8px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .upload-pic-form button,
+  .change-pic-btn {
+    padding: 10px;
+    background-color: #4E7133;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+  
+  .user-content-section {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-self: flex-start;
+  }
+  
+  .user-content-section h2 {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    font-weight: 800;
+  }
+  
+  .user-content-section h2:hover {
+    background-color: rgb(183, 162, 162);
+  }
+  
+  .log-out-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  
+  .log-out-section a {
+    margin-bottom: 16px;
+    cursor: pointer;
+  }
+  
+  .log-out-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .upload-pic-form button,
+  .change-pic-btn,
+  .log-out-section button,
+  .hide-profile-section {
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .upload-pic-form button:hover,
+  .change-pic-btn:hover,
+  .log-out-section button:hover,
+  .hide-profile-section:hover {
+    background-color: #0C359E;
+  }
+  
+  .upload-pic-form button:focus,
+  .change-pic-btn:focus,
+  .log-out-section button:focus,
+  .hide-profile-section:focus {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  }
+  
+  .upload-btn-choices {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+  }
+  
+  .log-out-section button {
+    padding: 10px;
+    background-color: #4E7133;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .show-profile-section {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    padding: 8px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .user-icon {
+    position: absolute;
+    top: 1%;
+    left: 0.5%;
+    z-index: 10;
+    cursor: pointer;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2px;
+  }
+  
+  /* Library Section CSS */
+  
+  .library-section {
+    max-height: 670px;
+    position: relative; 
+    overflow-y: auto;
+    z-index: 0; 
+    padding-bottom: 30px;
+  }
+  
+  .recommended-programs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 25px;
+  }
+  
+  .programs {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 2vh;
+  }
+  
+  .other-programs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .program-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: auto;
+    height: 190px;
+    width: 400px;
+    border: none;
+    box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.2), 2px 6px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #fff;
+    color: #000;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .program-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2), 0px 10px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .program-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 9px 3px 4px;
+  }
+  
+  .program-title {
+    font-size: 1rem;
+    font-weight: 900;
+    margin-bottom: 0;
+  }
+  
+  .program-description {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .book-img {
+    align-self: center;
+    height: 80px;
+    width: 80px;
+    object-fit: cover; 
+    overflow: hidden;
+    padding: 0;
+  }
+  
+  
+  /* Search Input CSS */ 
+  
+  .search-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10;
+    height: 50px;
+  }
+  
+  .search-input {
+    width: 180px;
+    margin-top: 10px;
+  }
+  
+  .search-icon {
+    height: 20px;
+    width: 50px;
+    font-size: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192,192,192);
+    border-radius: 2px;
+    margin-left: -1px;
+    margin-right: 10px;
+    padding: 5px;
+    margin-top: 0;
+    cursor: pointer;
+  }
 }

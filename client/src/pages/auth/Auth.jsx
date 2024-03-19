@@ -11,7 +11,6 @@ export const Authentication = () => {
       <div className="auth-container">
         <div className="right-side">
           <h2>PanpacificU E-Library</h2>
-          <a href="https://www.freepik.com/">Designed by macrovector / Freepik</a>
         </div>
         <div className="left-side">
           {form ? (
