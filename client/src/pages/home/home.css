@@ -614,19 +614,21 @@
   }
   
   .other-programs {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    max-width: 400;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
     flex-wrap: wrap;
     justify-content: space-around;
   }
   
   .program-card {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: auto;
-    height: 113px;
-    width: 300px;
+    justify-content: space-around;
+    height: 110px;
+    width: 170px;
     border: none;
     box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.2), 2px 6px 6px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -635,6 +637,8 @@
     color: #000;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 10px;
   }
   
   .program-card:hover {
