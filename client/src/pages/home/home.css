@@ -1,3 +1,4 @@
+
 .home-container {
   height: 100%;
   margin: 0;
@@ -261,7 +262,9 @@
 
 .other-programs {
   display: grid;
-  flex-direction: row;
+  max-width: 400;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
   flex-wrap: wrap;
   justify-content: space-around;
 }
