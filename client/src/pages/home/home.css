@@ -68,12 +68,17 @@
   height: 100%;
 }
 
+.programs h2 {
+  padding-left: 1vh;
+}
+
 .other-programs {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 
 .program-card {
   display: flex;
@@ -176,5 +181,35 @@
   
   .program-description {
     font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 538px) {
+  .program-card {
+    height: 110px;
+    width: 240px;
+  }
+
+  .program-title {
+    font-size: 0.9rem;
+  }
+  
+  .program-description {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 519px) {
+  .program-card {
+    height: 100px;
+    width: 220px;
+  }
+
+  .program-title {
+    font-size: 0.7rem;
+  }
+  
+  .program-description {
+    font-size: 0.6rem;
   }
 }

@@ -30,7 +30,6 @@ header .header-content {
 }
 
 main {
-  max-height: 600px;
   overflow-y: auto;
   position: relative;
   z-index: 0;
@@ -76,6 +75,7 @@ ion-icon:hover{
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
   margin: 20px;
+  margin-top: 10px;
 }
 
 .course-card:hover {
@@ -87,4 +87,84 @@ ion-icon:hover{
   font-size: 1.2rem;
   font-weight: 700;
   margin: 5vh;
+}
+
+
+@media screen and (max-width: 906px) {
+  .courses {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  }
+}
+
+
+@media screen and (max-width: 770px) {
+  .courses{
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .course-card{
+    height: 100px;
+    width: 250px;
+  }
+  
+}
+
+@media screen and (max-width: 579px) {
+  .course-card{
+    height: 100px;
+    width: 230px;
+  }
+
+  .course-title{
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 536px) {
+  .courses{
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .course-card{
+    height: 80px;
+    width: 190px;
+  }
+
+  .course-title{
+    font-size: 0.8rem;
+  }
+
+}
+
+@media screen and (max-width: 465px) {
+  .courses{
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .course-card{
+    height: 70px;
+    width: 180px;
+  }
+
+  .course-title{
+    font-size: 0.7rem;
+  }
+
+
 }
